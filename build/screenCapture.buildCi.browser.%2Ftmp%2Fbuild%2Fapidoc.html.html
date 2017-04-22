@@ -1,0 +1,1239 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/glebdmitriew/node-unzip-2">unzip2 (v0.2.5)</a>
+</h1>
+<h4>Unzip cross-platform streaming API compatible with fstream and fs.ReadStream</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unzip2">module unzip2</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Extract">
+            function <span class="apidocSignatureSpan">unzip2.</span>Extract
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse">
+            function <span class="apidocSignatureSpan">unzip2.</span>Parse
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.entry">
+            function <span class="apidocSignatureSpan">unzip2.</span>entry
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">unzip2.</span>Extract.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">unzip2.</span>Parse.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">unzip2.</span>entry.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unzip2.Extract">module unzip2.Extract</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Extract.Extract">
+            function <span class="apidocSignatureSpan">unzip2.</span>Extract
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Extract.super_">
+            function <span class="apidocSignatureSpan">unzip2.Extract.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unzip2.Extract.prototype">module unzip2.Extract.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Extract.prototype._write">
+            function <span class="apidocSignatureSpan">unzip2.Extract.prototype.</span>_write
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unzip2.Parse">module unzip2.Parse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.Parse">
+            function <span class="apidocSignatureSpan">unzip2.</span>Parse
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.create">
+            function <span class="apidocSignatureSpan">unzip2.Parse.</span>create
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.super_">
+            function <span class="apidocSignatureSpan">unzip2.Parse.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unzip2.Parse.prototype">module unzip2.Parse.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype._flush">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_flush
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype._processDataDescriptor">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_processDataDescriptor
+            <span class="apidocSignatureSpan">(entry)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype._readCentralDirectoryFileHeader">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readCentralDirectoryFileHeader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype._readEndOfCentralDirectoryRecord">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readEndOfCentralDirectoryRecord
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype._readFile">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readFile
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype._readRecord">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readRecord
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype._transform">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype.addListener">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype.on">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>on
+            <span class="apidocSignatureSpan">(type, listener)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.Parse.prototype.pipe">
+            function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>pipe
+            <span class="apidocSignatureSpan">(dest, opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unzip2.entry">module unzip2.entry</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.entry.entry">
+            function <span class="apidocSignatureSpan">unzip2.</span>entry
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.entry.super_">
+            function <span class="apidocSignatureSpan">unzip2.entry.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.unzip2.entry.prototype">module unzip2.entry.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.unzip2.entry.prototype.autodrain">
+            function <span class="apidocSignatureSpan">unzip2.entry.prototype.</span>autodrain
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unzip2" id="apidoc.module.unzip2">module unzip2</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Extract" id="apidoc.element.unzip2.Extract">
+        function <span class="apidocSignatureSpan">unzip2.</span>Extract
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Extract(opts) {
+  var self = this;
+  if (!(this instanceof Extract)) {
+    return new Extract(opts);
+  }
+
+  Writable.apply(this);
+  this._opts = opts || { verbose: false };
+
+  this._parser = Parse(this._opts);
+  this._parser.on('error', function(err) {
+    self.emit('error', err);
+  });
+  this.on('finish', function() {
+    self._parser.end();
+  });
+
+  var writer = Writer({
+    type: 'Directory',
+    path: opts.path
+  });
+  writer.on('error', function(err) {
+    self.emit('error', err);
+  });
+  writer.on('close', function() {
+    self.emit('close')
+  });
+
+  this.on('pipe', function(source) {
+    if (opts.verbose &amp;&amp; source.path) {
+      console.log('Archive: ', source.path);
+    }
+  });
+
+  this._parser.pipe(writer);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+$ npm install unzip2
+```
+
+## Quick Examples
+
+### Extract to a directory
+```javascript
+fs.createReadStream('path/to/archive.zip').pipe(unzip.<span class="apidocCodeKeywordSpan">Extract</span>({ path: '
+;output/path' }));
+```
+
+Extract emits the 'close' event once the zip's contents have been fully extracted to disk.
+
+### Parse zip file contents
+
+Process each zip file entry or pipe entries to another stream.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse" id="apidoc.element.unzip2.Parse">
+        function <span class="apidocSignatureSpan">unzip2.</span>Parse
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parse(opts) {
+  var self = this;
+  if (!(this instanceof Parse)) {
+    return new Parse(opts);
+  }
+
+  Transform.call(this, { lowWaterMark: 0 });
+  this._opts = opts || { verbose: false };
+  this._hasEntryListener = false;
+
+  this._pullStream = new PullStream();
+  this._pullStream.on("error", function (e) {
+    self.emit('error', e);
+  });
+  this._pullStream.once("end", function () {
+    self._streamEnd = true;
+  });
+  this._pullStream.once("finish", function () {
+    self._streamFinish = true;
+  });
+
+  this._readRecord();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Process each zip file entry or pipe entries to another stream.
+
+__Important__: If you do not intend to consume an entry stream's raw data, call autodrain() to dispose of the entry's
+contents. Otherwise you risk running out of memory.
+
+```javascript
+fs.createReadStream('path/to/archive.zip')
+.pipe(unzip.<span class="apidocCodeKeywordSpan">Parse</span>())
+.on('entry', function (entry) {
+  var fileName = entry.path;
+  var type = entry.type; // 'Directory' or 'File'
+  var size = entry.size;
+  if (fileName === "this IS the file I'm looking for") {
+    entry.pipe(fs.createWriteStream('output/path'));
+  } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.entry" id="apidoc.element.unzip2.entry">
+        function <span class="apidocSignatureSpan">unzip2.</span>entry
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Entry() {
+  PassThrough.call(this);
+  this.props = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unzip2.Extract" id="apidoc.module.unzip2.Extract">module unzip2.Extract</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Extract.Extract" id="apidoc.element.unzip2.Extract.Extract">
+        function <span class="apidocSignatureSpan">unzip2.</span>Extract
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Extract(opts) {
+  var self = this;
+  if (!(this instanceof Extract)) {
+    return new Extract(opts);
+  }
+
+  Writable.apply(this);
+  this._opts = opts || { verbose: false };
+
+  this._parser = Parse(this._opts);
+  this._parser.on('error', function(err) {
+    self.emit('error', err);
+  });
+  this.on('finish', function() {
+    self._parser.end();
+  });
+
+  var writer = Writer({
+    type: 'Directory',
+    path: opts.path
+  });
+  writer.on('error', function(err) {
+    self.emit('error', err);
+  });
+  writer.on('close', function() {
+    self.emit('close')
+  });
+
+  this.on('pipe', function(source) {
+    if (opts.verbose &amp;&amp; source.path) {
+      console.log('Archive: ', source.path);
+    }
+  });
+
+  this._parser.pipe(writer);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+$ npm install unzip2
+```
+
+## Quick Examples
+
+### Extract to a directory
+```javascript
+fs.createReadStream('path/to/archive.zip').pipe(unzip.<span class="apidocCodeKeywordSpan">Extract</span>({ path: '
+;output/path' }));
+```
+
+Extract emits the 'close' event once the zip's contents have been fully extracted to disk.
+
+### Parse zip file contents
+
+Process each zip file entry or pipe entries to another stream.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Extract.super_" id="apidoc.element.unzip2.Extract.super_">
+        function <span class="apidocSignatureSpan">unzip2.Extract.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Writable(options) {
+  // Writable ctor is applied to Duplexes, too.
+  // `realHasInstance` is necessary because using plain `instanceof`
+  // would return false, as no `_writableState` property is attached.
+
+  // Trying to use the custom `instanceof` for Writable here will also break the
+  // Node.js LazyTransform implementation, which has a non-trivial getter for
+  // `_writableState` that would lead to infinite recursion.
+  if (!(realHasInstance.call(Writable, this)) &amp;&amp;
+      !(this instanceof Stream.Duplex)) {
+    return new Writable(options);
+  }
+
+  this._writableState = new WritableState(options, this);
+
+  // legacy.
+  this.writable = true;
+
+  if (options) {
+    if (typeof options.write === 'function')
+      this._write = options.write;
+
+    if (typeof options.writev === 'function')
+      this._writev = options.writev;
+  }
+
+  Stream.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unzip2.Extract.prototype" id="apidoc.module.unzip2.Extract.prototype">module unzip2.Extract.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Extract.prototype._write" id="apidoc.element.unzip2.Extract.prototype._write">
+        function <span class="apidocSignatureSpan">unzip2.Extract.prototype.</span>_write
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_write = function (chunk, encoding, callback) {
+  if (this._parser.write(chunk)) {
+    return callback();
+  }
+
+  return this._parser.once('drain', callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unzip2.Parse" id="apidoc.module.unzip2.Parse">module unzip2.Parse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.Parse" id="apidoc.element.unzip2.Parse.Parse">
+        function <span class="apidocSignatureSpan">unzip2.</span>Parse
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parse(opts) {
+  var self = this;
+  if (!(this instanceof Parse)) {
+    return new Parse(opts);
+  }
+
+  Transform.call(this, { lowWaterMark: 0 });
+  this._opts = opts || { verbose: false };
+  this._hasEntryListener = false;
+
+  this._pullStream = new PullStream();
+  this._pullStream.on("error", function (e) {
+    self.emit('error', e);
+  });
+  this._pullStream.once("end", function () {
+    self._streamEnd = true;
+  });
+  this._pullStream.once("finish", function () {
+    self._streamFinish = true;
+  });
+
+  this._readRecord();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Process each zip file entry or pipe entries to another stream.
+
+__Important__: If you do not intend to consume an entry stream's raw data, call autodrain() to dispose of the entry's
+contents. Otherwise you risk running out of memory.
+
+```javascript
+fs.createReadStream('path/to/archive.zip')
+.pipe(unzip.<span class="apidocCodeKeywordSpan">Parse</span>())
+.on('entry', function (entry) {
+  var fileName = entry.path;
+  var type = entry.type; // 'Directory' or 'File'
+  var size = entry.size;
+  if (fileName === "this IS the file I'm looking for") {
+    entry.pipe(fs.createWriteStream('output/path'));
+  } else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.create" id="apidoc.element.unzip2.Parse.create">
+        function <span class="apidocSignatureSpan">unzip2.Parse.</span>create
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parse(opts) {
+  var self = this;
+  if (!(this instanceof Parse)) {
+    return new Parse(opts);
+  }
+
+  Transform.call(this, { lowWaterMark: 0 });
+  this._opts = opts || { verbose: false };
+  this._hasEntryListener = false;
+
+  this._pullStream = new PullStream();
+  this._pullStream.on("error", function (e) {
+    self.emit('error', e);
+  });
+  this._pullStream.once("end", function () {
+    self._streamEnd = true;
+  });
+  this._pullStream.once("finish", function () {
+    self._streamFinish = true;
+  });
+
+  this._readRecord();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.super_" id="apidoc.element.unzip2.Parse.super_">
+        function <span class="apidocSignatureSpan">unzip2.Parse.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform))
+    return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === 'function')
+      this._transform = options.transform;
+
+    if (typeof options.flush === 'function')
+      this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once('prefinish', function() {
+    if (typeof this._flush === 'function')
+      this._flush(function(er) {
+        done(stream, er);
+      });
+    else
+      done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unzip2.Parse.prototype" id="apidoc.module.unzip2.Parse.prototype">module unzip2.Parse.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype._flush" id="apidoc.element.unzip2.Parse.prototype._flush">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_flush
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_flush = function (callback) {
+  if (!this._streamEnd || !this._streamFinish) {
+    return setImmediate(this._flush.bind(this, callback));
+  }
+
+  this.emit('close');
+  return callback();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype._processDataDescriptor" id="apidoc.element.unzip2.Parse.prototype._processDataDescriptor">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_processDataDescriptor
+        <span class="apidocSignatureSpan">(entry)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_processDataDescriptor = function (entry) {
+  var self = this;
+  this._pullStream.pull(16, function (err, data) {
+    if (err) {
+      return self.emit('error', err);
+    }
+
+    var vars = binary.parse(data)
+      .word32lu('dataDescriptorSignature')
+      .word32lu('crc32')
+      .word32lu('compressedSize')
+      .word32lu('uncompressedSize')
+      .vars;
+
+    entry.size = vars.uncompressedSize;
+    self._readRecord();
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype._readCentralDirectoryFileHeader" id="apidoc.element.unzip2.Parse.prototype._readCentralDirectoryFileHeader">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readCentralDirectoryFileHeader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_readCentralDirectoryFileHeader = function () {
+  var self = this;
+  this._pullStream.pull(42, function (err, data) {
+    if (err) {
+      return self.emit('error', err);
+    }
+
+    var vars = binary.parse(data)
+      .word16lu('versionMadeBy')
+      .word16lu('versionsNeededToExtract')
+      .word16lu('flags')
+      .word16lu('compressionMethod')
+      .word16lu('lastModifiedTime')
+      .word16lu('lastModifiedDate')
+      .word32lu('crc32')
+      .word32lu('compressedSize')
+      .word32lu('uncompressedSize')
+      .word16lu('fileNameLength')
+      .word16lu('extraFieldLength')
+      .word16lu('fileCommentLength')
+      .word16lu('diskNumber')
+      .word16lu('internalFileAttributes')
+      .word32lu('externalFileAttributes')
+      .word32lu('offsetToLocalFileHeader')
+      .vars;
+
+    return self._pullStream.pull(vars.fileNameLength, function (err, fileName) {
+      if (err) {
+        return self.emit('error', err);
+      }
+      fileName = fileName.toString('utf8');
+
+      self._pullStream.pull(vars.extraFieldLength, function (err, extraField) {
+        if (err) {
+          return self.emit('error', err);
+        }
+        self._pullStream.pull(vars.fileCommentLength, function (err, fileComment) {
+          if (err) {
+            return self.emit('error', err);
+          }
+          return self._readRecord();
+        });
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype._readEndOfCentralDirectoryRecord" id="apidoc.element.unzip2.Parse.prototype._readEndOfCentralDirectoryRecord">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readEndOfCentralDirectoryRecord
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_readEndOfCentralDirectoryRecord = function () {
+  var self = this;
+  this._pullStream.pull(18, function (err, data) {
+    if (err) {
+      return self.emit('error', err);
+    }
+
+    var vars = binary.parse(data)
+      .word16lu('diskNumber')
+      .word16lu('diskStart')
+      .word16lu('numberOfRecordsOnDisk')
+      .word16lu('numberOfRecords')
+      .word32lu('sizeOfCentralDirectory')
+      .word32lu('offsetToStartOfCentralDirectory')
+      .word16lu('commentLength')
+      .vars;
+
+    if (vars.commentLength) {
+      setImmediate(function() {
+        self._pullStream.pull(vars.commentLength, function (err, comment) {
+          if (err) {
+            return self.emit('error', err);
+          }
+          comment = comment.toString('utf8');
+          return self._pullStream.end();
+        });
+      });
+
+    } else {
+      self._pullStream.end();
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype._readFile" id="apidoc.element.unzip2.Parse.prototype._readFile">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readFile
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_readFile = function () {
+  var self = this;
+  this._pullStream.pull(26, function (err, data) {
+    if (err) {
+      return self.emit('error', err);
+    }
+
+    var vars = binary.parse(data)
+      .word16lu('versionsNeededToExtract')
+      .word16lu('flags')
+      .word16lu('compressionMethod')
+      .word16lu('lastModifiedTime')
+      .word16lu('lastModifiedDate')
+      .word32lu('crc32')
+      .word32lu('compressedSize')
+      .word32lu('uncompressedSize')
+      .word16lu('fileNameLength')
+      .word16lu('extraFieldLength')
+      .vars;
+
+    return self._pullStream.pull(vars.fileNameLength, function (err, fileName) {
+      if (err) {
+        return self.emit('error', err);
+      }
+      fileName = fileName.toString('utf8');
+      var entry = new Entry();
+      entry.path = fileName;
+      entry.props.path = fileName;
+      entry.type = (vars.compressedSize === 0 &amp;&amp; /[\/\\]$/.test(fileName)) ? 'Directory' : 'File';
+
+      if (self._opts.verbose) {
+        if (entry.type === 'Directory') {
+          console.log('   creating:', fileName);
+        } else if (entry.type === 'File') {
+          if (vars.compressionMethod === 0) {
+            console.log(' extracting:', fileName);
+          } else {
+            console.log('  inflating:', fileName);
+          }
+        }
+      }
+
+      var hasEntryListener = self._hasEntryListener;
+      if (hasEntryListener) {
+        self.emit('entry', entry);
+      }
+
+      self._pullStream.pull(vars.extraFieldLength, function (err, extraField) {
+        if (err) {
+          return self.emit('error', err);
+        }
+        if (entry.type === 'Directory') {
+          self._pullStream.pull(vars.compressedSize, function (err, compressedData) {
+            if (err) {
+              return self.emit('error', err);
+            }
+
+            if (hasEntryListener) {
+              entry.write(compressedData);
+              entry.end();
+            }
+
+            return self._readRecord();
+          });
+        } else {
+          var fileSizeKnown = !(vars.flags &amp; 0x08);
+          var has_compression = !(vars.compressionMethod === 0);
+          var inflater;
+
+          if(has_compression) {
+            inflater = zlib.createInflateRaw();
+            inflater.on('error', function (err) {
+              self.emit('error', err);
+            });
+          }
+
+          if (fileSizeKnown) {
+            entry.size = vars.uncompressedSize;
+            if (hasEntryListener) {
+              entry.on('finish', self._readRecord.bind(self));
+              if(has_compression) {
+                self._pullStream.pipe(vars.compressedSize, inflater).pipe(entry);
+              } else {
+                self._pullStream.pipe(vars.compressedSize, entry);
+              }
+            } else {
+              self._pullStream.drain(vars.compressedSize, function (err) {
+                if (err) {
+                  return self.emit('error', err);
+                }
+                self._readRecord();
+              });
+            }
+          } else {
+            var descriptorSig = new Buffer(4);
+            descriptorSig.writeUInt32LE(0x08074b50, 0);
+
+            var matchStream = new MatchStream({ pattern: descriptorSig }, function (buf, matched, extra) {
+              if (hasEntryListener) {
+                if (!matched) {
+                  return this.push(buf);
+                }
+                this.push(buf);
+              }
+              self._pullStream.unpipe();
+              self._pullStream.prepend(extra);
+              setImmediate(function() {
+                self._processDataDescriptor(entry);
+              });
+              return this.push(null);
+            });
+
+            self._pullStream.pipe(matchStream);
+            if (hasEntryListener) {
+              if(has_compression) {
+                matchStream.pipe(inflater).pipe(entry);
+              } else {
+                matchStream.pipe(entry);
+              }
+            }
+          }
+        }
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype._readRecord" id="apidoc.element.unzip2.Parse.prototype._readRecord">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_readRecord
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_readRecord = function () {
+  var self = this;
+  this._pullStream.pull(4, function (err, data) {
+    if (err) {
+      return self.emit('error', err);
+    }
+
+    if (data.length === 0) {
+      return;
+    }
+
+    var signature = data.readUInt32LE(0);
+    if (signature === 0x04034b50) {
+      self._readFile();
+    } else if (signature === 0x02014b50) {
+      self._readCentralDirectoryFileHeader();
+    } else if (signature === 0x06054b50) {
+      self._readEndOfCentralDirectoryRecord();
+    } else {
+      err = new Error('invalid signature: 0x' + signature.toString(16));
+      self.emit('error', err);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype._transform" id="apidoc.element.unzip2.Parse.prototype._transform">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, encoding, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, encoding, callback) {
+  if (this._pullStream.write(chunk)) {
+    return callback();
+  }
+
+  this._pullStream.once('drain', callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype.addListener" id="apidoc.element.unzip2.Parse.prototype.addListener">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function (type, listener) {
+  if ('entry' === type) {
+    this._hasEntryListener = true;
+  }
+  return Transform.prototype.addListener.call(this, type, listener);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype.on" id="apidoc.element.unzip2.Parse.prototype.on">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>on
+        <span class="apidocSignatureSpan">(type, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (type, listener) {
+  if ('entry' === type) {
+    this._hasEntryListener = true;
+  }
+  return Transform.prototype.addListener.call(this, type, listener);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+__Important__: If you do not intend to consume an entry stream's raw data, call autodrain() to dispose of the entry's
+contents. Otherwise you risk running out of memory.
+
+```javascript
+fs.createReadStream('path/to/archive.zip')
+.pipe(unzip.Parse())
+.<span class="apidocCodeKeywordSpan">on</span>('entry', function (entry) {
+  var fileName = entry.path;
+  var type = entry.type; // 'Directory' or 'File'
+  var size = entry.size;
+  if (fileName === "this IS the file I'm looking for") {
+    entry.pipe(fs.createWriteStream('output/path'));
+  } else {
+    entry.autodrain();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.Parse.prototype.pipe" id="apidoc.element.unzip2.Parse.prototype.pipe">
+        function <span class="apidocSignatureSpan">unzip2.Parse.prototype.</span>pipe
+        <span class="apidocSignatureSpan">(dest, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pipe = function (dest, opts) {
+  var self = this;
+  if (typeof dest.add === "function") {
+    self.on("entry", function (entry) {
+      dest.add(entry);
+    })
+  }
+  return Transform.prototype.pipe.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+$ npm install unzip2
+```
+
+## Quick Examples
+
+### Extract to a directory
+```javascript
+fs.createReadStream('path/to/archive.zip').<span class="apidocCodeKeywordSpan">pipe</span>(unzip.Extract({ path: '
+;output/path' }));
+```
+
+Extract emits the 'close' event once the zip's contents have been fully extracted to disk.
+
+### Parse zip file contents
+
+Process each zip file entry or pipe entries to another stream.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unzip2.entry" id="apidoc.module.unzip2.entry">module unzip2.entry</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.entry.entry" id="apidoc.element.unzip2.entry.entry">
+        function <span class="apidocSignatureSpan">unzip2.</span>entry
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Entry() {
+  PassThrough.call(this);
+  this.props = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.entry.super_" id="apidoc.element.unzip2.entry.super_">
+        function <span class="apidocSignatureSpan">unzip2.entry.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PassThrough(options) {
+  if (!(this instanceof PassThrough))
+    return new PassThrough(options);
+
+  Transform.call(this, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.unzip2.entry.prototype" id="apidoc.module.unzip2.entry.prototype">module unzip2.entry.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.unzip2.entry.prototype.autodrain" id="apidoc.element.unzip2.entry.prototype.autodrain">
+        function <span class="apidocSignatureSpan">unzip2.entry.prototype.</span>autodrain
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">autodrain = function () {
+  this.on('readable', this.read.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .on('entry', function (entry) {
+    var fileName = entry.path;
+    var type = entry.type; // 'Directory' or 'File'
+    var size = entry.size;
+    if (fileName === "this IS the file I'm looking for") {
+      entry.pipe(fs.createWriteStream('output/path'));
+    } else {
+      entry.<span class="apidocCodeKeywordSpan">autodrain</span>();
+    }
+  });
+```
+
+Or pipe the output of unzip.Parse() to fstream
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
